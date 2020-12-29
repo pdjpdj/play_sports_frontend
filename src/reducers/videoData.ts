@@ -1,9 +1,9 @@
 export interface VideoDataItem {
   _id: string;
-  description: string | undefined;
+  description: string;
   publishDate: string;
-  title: string | undefined;
-  urlTitle: string | undefined;
+  title: string;
+  urlTitle: string;
 }
 
 interface VideoDataState {

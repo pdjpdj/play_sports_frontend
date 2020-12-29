@@ -5,3 +5,12 @@
   justify-items: flex-start;
   padding: 0.5rem;
 }
+
+.share-img {
+  width: 122px;
+  height: 40px;
+}
+
+.video-item-description {
+  white-space: pre-wrap;
+}
