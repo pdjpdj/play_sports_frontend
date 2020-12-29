@@ -36,9 +36,13 @@ const VideoList: React.FC<VideoListProps> = (props: VideoListProps) => {
   return (
     <div>
       {videos ? 
-        videos.map((video: VideoDataItem) => (
-          <VideoItem videoData={video} key={video._id} />
-        )) : 
+        <div>
+        <div className='video-list-title'>Latest videos</div>
+          {videos.map((video: VideoDataItem) => (
+            <VideoItem videoData={video} key={video._id} />
+          ))} 
+        </div>
+        : 
         'nothing loaded'
       }
     </div>

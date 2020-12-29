@@ -3,12 +3,13 @@
   flex-direction: column;
   align-content: flex-start;
   justify-items: flex-start;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .share-img {
   width: 122px;
   height: 40px;
+  padding: 0.5rem 0;
 }
 
 .video-item-description {
