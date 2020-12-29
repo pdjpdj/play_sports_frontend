@@ -1,0 +1,7 @@
+.video-item-container {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-items: flex-start;
+  padding: 0.5rem;
+}
