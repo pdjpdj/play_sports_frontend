@@ -13,4 +13,8 @@ When clicking a video link in the list the description and the video itself get 
 Clicking the title of the expanded version, or the `Collapse detail` button, collapses the detail back to the default list item.
 If I was to give myself more time I would:
 1) animate the expanding/collapsing rather than direct show/hide.
+- use some kind of css animation, but could potentially be confusing to the user if too slow
+- or use some npm package (react-spring?) to handle the animation
 2) collapse all other open list items when opening another one.
+- would have to run through all the videoItems to workout if they are open or not
+- possibly use some css rule to close all except the one with the clicked id? `:not`?
