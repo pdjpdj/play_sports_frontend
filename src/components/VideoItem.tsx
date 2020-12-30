@@ -14,10 +14,14 @@ const VideoItem: React.FC<VideoItemProps> = (props: VideoItemProps) => {
   const dateStr = (new Date(videoData.publishDate)).toDateString();
 
   const toggleExpand = () => {
+    const el = document.getElementById(videoData._id);
+    if (el) {
+      el.scrollIntoView();
+    }
     setExpand(!expand);
   }
   return (
-    <div>
+    <div id={videoData._id}>
       {expand ?
         <div className='video-item-container'>
           <video controls playsInline preload='none' poster={`https://img.youtube.com/vi/${videoData._id}/mqdefault.jpg`}>
@@ -30,9 +34,10 @@ const VideoItem: React.FC<VideoItemProps> = (props: VideoItemProps) => {
           <div className='video-item-description'>
             <Linkify>{videoData.description}</Linkify>
           </div>
+          <button onClick={toggleExpand} className='video-item-collapse'>Collapse detail</button>
         </div>  
         :
-        <div className='video-item-container' onClick={toggleExpand}>
+        <div className='video-item-container video-item-collapsed' onClick={toggleExpand}>
           <img src={`https://img.youtube.com/vi/${videoData._id}/mqdefault.jpg`} alt={videoData.title} />
           <strong>{dateStr}</strong>
           {videoData.title}
