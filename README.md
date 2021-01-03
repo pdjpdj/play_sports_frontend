@@ -5,7 +5,7 @@ Code test for Play Sports Front end.
 ## Setup
 1) After cloning repo, run `npm install`
 2) Run `npm start` to start the development server and see the app running.
-3) For a production build run `npm build` and deploy the `build` folder to the web-server of choice.
+3) For a production build run `npm run-script build` and deploy the `build` folder to the web-server of choice.
 
 ## Improvements Made
 NB: the header and footer are both screenshots of the existing site.
